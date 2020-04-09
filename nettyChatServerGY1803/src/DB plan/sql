@@ -1,0 +1,27 @@
+
+数据库设计：
+
+CREATE DATABASE chat;
+
+表设计：
+
+CREATE TABLE user(
+    id  INT(11) PRIMARY KEY,
+    name VARCHAR(20),
+    pwd VARCHAR(20),
+    email VARCHAR(20));
+
+CREATE TABLE offline_msg(
+    id INT(11) PRIMARY KEY,
+    user_id INT(11),
+    to_name VARCHAR(20),
+    from_name VARCHAR(20),
+    msg_type INT(2),
+    msg VARCHAR(200),
+    state INT(2));
+
+
+插入测试语句
+
+INSERT INTO user VALUES(1,'Sun Jingjun','sunjingjun.','2568312682@qq.com');
+INSERT INTO user VALUES(2,'Wang Hong','wanghong.','528103009@qq.com');
